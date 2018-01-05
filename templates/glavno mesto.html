@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block glavnomesto %}
+<p>Katero je glavno mesto {{drzava}} ?</p>
+
+<p>Slika glavnega mesta</p>
+
+{% if drzava == "Kitajske" %}
+<img src="\assets\img\peking.jpg">
+{% elif drzava == "Kanade" %}
+<img src="\assets\img\otawa.jpg">
+{% elif drzava == "Indonezije" %}
+<img src="\assets\img\jakarta.jpg">
+{% elif drzava == "Tunizije" %}
+<img src="\assets\img\tunis.jpg">
+{% endif %}
+
+<br>
+<br>
+
+<form method="post" action="/kviz">
+    <input name="vnos">
+    <button type="submit">Preveri vnos</button>
+</form>
+{% endblock %}
+
+
+
+
+
+
+
